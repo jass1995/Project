@@ -12,7 +12,7 @@ public class Employee {
     String firstname;
     String lastname;
     String gender;
-    String location;
+    String  loc;
     
     
     
