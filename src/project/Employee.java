@@ -5,17 +5,16 @@
  */
 package project;
 
-/**
- *
- * @author gjune
- */
+
 public class Employee {
     
     int id;
     String firstname;
     String lastname;
     String gender;
-    String address;
-    String city;
-    //hi,,,m jass
+    String location;
+    
+    
+    
+   
 }
