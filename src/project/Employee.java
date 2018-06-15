@@ -3,18 +3,84 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project;
+package payrollsystem;
 
+/**
+ *
+ * @author JASWINDER
+ */
+public abstract class Employee {
+    // Variables
+    private int empId;
+    private String name;
+    Vehicle vehicle;
+    
+    // Class constructor
+    public Employee() {
+        // Default constructor is a constructor with zero parameter
+        System.out.println("... inside default constructor");
+        empId = 0;
+        name = "";
+    }
+    
+    public Employee (int pEmpId, String pName, Vehicle pV) {
+       
+        empId = pEmpId;
+        name = pName;
+        this.vehicle = pV;
+    }
+    
+    public Employee (int pEmpId, String pName, String pPlate, String pColour) {
+     
+        empId = pEmpId;
+        name = pName;
+        this.vehicle = new Vehicle(pPlate, pColour) {};
+    }
+    
+    // Abstract method of the class: calculatePay() will be defined within FullTime and PartTime
+    // as these both classes are subclasses of Employee abstract class.
+    public abstract double calcEarning();
+    
+    /**
+     * @return the empId
+     */
+    public int getEmpId() {
+        return empId;
+    }
 
-public class Employee {
+    /**
+     * @param empId the empId to set
+     */
+    public void setEmpId(int empId) {
+        this.empId = empId;
+    }
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+
+    /**
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * @return the Vehicle
+     */
+    public Vehicle getVehicle() {
+        return vehicle;
+    }
+
+    /**
+     * @param Vehicle the Vehicle to set
+     */
+    public void setVehicle(Vehicle Vehicle) {
+        this.vehicle = Vehicle;
+    }
     
-    int id;
-    String firstname;
-    String lastname;
-    String gender;
-    String  loc;
-    
-    
-    
-   
 }
